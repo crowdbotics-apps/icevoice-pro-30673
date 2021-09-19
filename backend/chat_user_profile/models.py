@@ -30,6 +30,11 @@ class Profile(models.Model):
         auto_now=True,
     )
     last_login = models.DateTimeField()
+    sex = models.CharField(
+        max_length=256,
+        null=True,
+        blank=True,
+    )
 
 
 class VerificationCode(models.Model):

@@ -33,11 +33,6 @@ class User(AbstractUser):
         blank=True,
         max_length=255,
     )
-    email = models.EmailField(
-        null=True,
-        blank=True,
-        max_length=255,
-    )
     timestamp_created = models.DateTimeField(
         null=True,
         blank=True,
@@ -47,4 +42,14 @@ class User(AbstractUser):
         null=True,
         blank=True,
         auto_now=True,
+    )
+    phone_number = models.CharField(
+        max_length=256,
+        null=True,
+        blank=True,
+    )
+    email = models.EmailField(
+        max_length=256,
+        null=True,
+        blank=True,
     )

@@ -97,6 +97,11 @@ class MessageAction(models.Model):
     timestamp_action = models.DateTimeField(
         auto_now_add=True,
     )
+    video_call = models.ManyToManyField(
+        "chat.ForwardedMessage",
+        blank=True,
+        related_name="messageaction_video_call",
+    )
 
 
 class ThreadAction(models.Model):
